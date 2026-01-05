@@ -1,0 +1,28 @@
+/* Sidebar */
+.main-sidebar {
+    background: linear-gradient(180deg, #0b1a33, #101f3d);
+}
+
+/* Cards */
+.card {
+    border-radius: 18px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: none;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 12px;
+    padding: 8px 16px;
+}
+
+/* Tables */
+.table {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Dark mode background */
+body.dark-mode {
+    background-color: #0b1a33;
+}
