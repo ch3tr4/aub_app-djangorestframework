@@ -1,0 +1,146 @@
+/* =========================
+   AUB COLOR VARIABLES
+========================= */
+
+:root {
+    --aub-primary: #0b1a33;
+    --aub-secondary: #101f3d;
+    --aub-accent: #f2c94c;
+
+    --aub-bg: #f9fafb;
+    --aub-card: #ffffff;
+    --aub-text: #1f2937;
+}
+
+/* =========================
+   DARK MODE (ONLY 1 DARK)
+========================= */
+
+body.dark-mode {
+    --aub-bg: #0b1a33;
+    --aub-card: #101f3d;
+    --aub-text: #ffffff;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+body {
+    background-color: var(--aub-bg) !important;
+    color: var(--aub-text) !important;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* =========================
+   SIDEBAR (AUB STYLE)
+========================= */
+
+.main-sidebar {
+    background: linear-gradient(180deg, #0b1a33, #101f3d) !important;
+    width: 80px !important;
+    transition: width 0.25s ease;
+}
+
+/* Expand on hover */
+.main-sidebar:hover {
+    width: 260px !important;
+}
+
+/* Sidebar items */
+.main-sidebar .nav-link p {
+    display: none !important;
+}
+
+.main-sidebar:hover .nav-link p {
+    display: inline !important;
+}
+
+.main-sidebar .nav-link i {
+    font-size: 20px;
+}
+
+/* =========================
+   BRAND / LOGO (BIG + CLEAN)
+========================= */
+
+.main-sidebar .brand-link {
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Kill ALL AdminLTE/Jazzmin styles */
+.main-sidebar .brand-link .brand-image,
+.main-sidebar .brand-link .brand-image.elevation-3 {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+
+    max-height: 48px !important;   /* 🔥 LOGO SIZE */
+    width: auto !important;
+    margin: 0 auto !important;
+}
+
+/* Icon-only look */
+.main-sidebar .brand-link .brand-text {
+    display: none !important;
+}
+
+/* =========================
+   CARDS (MATCH AUB APP)
+========================= */
+
+.card {
+    background-color: var(--aub-card) !important;
+    border-radius: 20px !important;
+    border: none !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    border-radius: 14px !important;
+    padding: 8px 18px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: var(--aub-primary) !important;
+    border: none !important;
+}
+
+/* =========================
+   TABLES
+========================= */
+
+.table {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+.form-control {
+    border-radius: 12px !important;
+}
+
+/* =========================
+   DARK MODE FIXES
+========================= */
+
+body.dark-mode .card,
+body.dark-mode .table,
+body.dark-mode .form-control {
+    background-color: var(--aub-card) !important;
+    color: #ffffff !important;
+}
