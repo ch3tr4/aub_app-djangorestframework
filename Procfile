@@ -1,0 +1,1 @@
+web: gunicorn aub_backend.wsgi

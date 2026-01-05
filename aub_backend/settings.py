@@ -24,9 +24,11 @@ SECRET_KEY = 'django-insecure-r7%o)&!gp+0-@tlr_%(02umr0@t8cn^-qs*w(6*tk-1l_wr8@g
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['aubapp-django.up.railway.app', 'localhost', '127.0.0.1']
+
+CSRF_TRUSTED_ORIGINS = ['https://aubapp-django.up.railway.app']
 
 
 # Application definition
