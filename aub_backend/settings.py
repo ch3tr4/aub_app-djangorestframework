@@ -92,6 +92,14 @@ JAZZMIN_SETTINGS = {
         "api.course": "fas fa-graduation-cap",
         "api.jobposting": "fas fa-briefcase",
         "api.book": "fas fa-book",
+
+        "api.enrollment": "fas fa-user-check",
+        "api.eventmenu": "fas fa-utensils",
+        "api.extracourse": "fas fa-plus-circle",
+        "api.news": "fas fa-newspaper",
+
+        "authtoken.TokenProxy": "fas fa-key",
+
     },
 }
 
