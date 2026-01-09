@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     'rest_framework.authtoken',
+    "cloudinary",
+    "cloudinary_storage",
 
     'api',
 ]
@@ -243,6 +245,8 @@ CORS_ALLOW_ALL_ORIGINS = True
 # ======================
 # STATIC & MEDIA
 # ======================
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+STATICFILES_STORAGE = "cloudinary_storage.storage.StaticHashedCloudinaryStorage"
 
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
