@@ -86,19 +86,26 @@ class LoginByIdSerializer(serializers.Serializer):
         return data
 
 class NewsSerializer(serializers.ModelSerializer):
-    thumbnail = serializers.ImageField(required=False, allow_null=True)
+    image = serializers.SerializerMethodField()
 
     class Meta:
         model = News
         fields = [
             'id',
             'title',
-            'content',        
-            'thumbnail',
+            'content',
+            'image',
             'category',
             'views',
             'created_at',
         ]
+
+    def get_image(self, obj):
+        request = self.context.get('request')
+        if obj.thumbnail:
+            return request.build_absolute_uri(obj.thumbnail.url)
+        return None
+
 
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:

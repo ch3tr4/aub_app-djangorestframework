@@ -102,6 +102,24 @@ class NewsViewSet(viewsets.ReadOnlyModelViewSet):
     permission_classes = [AllowAny]
     serializer_class = NewsSerializer
 
+    def get_serializer_context(self):
+        return {'request': self.request}
+
+    def get_queryset(self):
+        queryset = News.objects.all()
+
+        if self.request.query_params.get('featured') == 'true':
+            return queryset.filter(is_featured=True)
+
+        category = self.request.query_params.get('category')
+        if category:
+            queryset = queryset.filter(category=category)
+
+        return queryset
+
+    permission_classes = [AllowAny]
+    serializer_class = NewsSerializer
+
     def get_queryset(self):
         queryset = News.objects.all()
 
